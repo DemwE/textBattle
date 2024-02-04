@@ -11,24 +11,24 @@
       "name": "Steel Helmet",
       "defense": 5,
       "resistance": {
-        "Physical": 0.4,
-        "Magic": 0.2
+        "Physical": 0.1,
+        "Magic": 0.1
       }
     },
     "chestplate": {
       "name": "Steel Chestplate",
       "defense": 10,
       "resistance": {
-        "Physical": 0.6,
-        "Magic": 0.4
+        "Physical": 0.4,
+        "Magic": 0.3
       }
     },
     "leggings": {
       "name": "Steel Leggings",
       "defense": 7,
       "resistance": {
-        "Physical": 0.4,
-        "Magic": 0.2
+        "Physical": 0.2,
+        "Magic": 0.1
       }
     }
   }

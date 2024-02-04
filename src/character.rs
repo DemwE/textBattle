@@ -28,8 +28,7 @@ impl Character {
 
         let resistance = defense_type.get(attack_type).unwrap_or(&0.0);
 
-        let damage_dealt = damage - (total_defense * resistance);
-        return damage_dealt;
+        return (damage - (total_defense * resistance)).max(0.0);
     }
 
     pub fn attack(&self, other: &mut Character) {
