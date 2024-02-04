@@ -1,0 +1,35 @@
+{
+  "name": "Hero",
+  "health": 100,
+  "weapon": {
+    "name": "Sword",
+    "damage": 10,
+    "attack_type": "Physical"
+  },
+  "armor": {
+    "helmet": {
+      "name": "Steel Helmet",
+      "defense": 5,
+      "resistance": {
+        "Physical": 0.4,
+        "Magic": 0.2
+      }
+    },
+    "chestplate": {
+      "name": "Steel Chestplate",
+      "defense": 10,
+      "resistance": {
+        "Physical": 0.6,
+        "Magic": 0.4
+      }
+    },
+    "leggings": {
+      "name": "Steel Leggings",
+      "defense": 7,
+      "resistance": {
+        "Physical": 0.4,
+        "Magic": 0.2
+      }
+    }
+  }
+}
