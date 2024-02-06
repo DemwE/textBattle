@@ -1,6 +1,6 @@
 {
   "name": "Dark Sorcerer",
-  "health": 80,
+  "health": 100,
   "weapon": {
     "name": "Staff of Shadows",
     "damage": 15,

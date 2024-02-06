@@ -12,10 +12,11 @@ use std::sync::Arc;
 fn main() {
     let hero_json = fs::read_to_string("./src/hero.json").expect("Unable to read file");
     let mut hero: Character = serde_json::from_str(&hero_json).expect("JSON was not well-formatted");
-    println!("Hero: {:?}", hero);
 
     let enemy_json = fs::read_to_string("./src/enemy.json").expect("Unable to read file");
     let mut enemy: Character = serde_json::from_str(&enemy_json).expect("JSON was not well-formatted");
+
+    println!("Hero: {:?}", hero);
     println!("Enemy: {:?}", enemy);
 
     let m = Arc::new(MultiProgress::new());
@@ -33,7 +34,6 @@ fn main() {
         enemy_pb.set_position((enemy.health() as u64).max(0));
 
         if enemy.health() <= 0.0 {
-            println!("{} wins!", hero.name());
             break;
         }
 
@@ -41,7 +41,6 @@ fn main() {
         hero_pb.set_position((hero.health() as u64).max(0));
 
         if hero.health() <= 0.0 {
-            println!("{} wins!", enemy.name());
             break;
         }
 
