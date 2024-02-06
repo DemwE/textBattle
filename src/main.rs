@@ -12,10 +12,11 @@ use std::sync::Arc;
 fn main() {
     let hero_json = fs::read_to_string("./src/hero.json").expect("Unable to read file");
     let mut hero: Character = serde_json::from_str(&hero_json).expect("JSON was not well-formatted");
-    println!("Hero: {:?}", hero);
 
     let enemy_json = fs::read_to_string("./src/enemy.json").expect("Unable to read file");
     let mut enemy: Character = serde_json::from_str(&enemy_json).expect("JSON was not well-formatted");
+
+    println!("Hero: {:?}", hero);
     println!("Enemy: {:?}", enemy);
 
     let m = Arc::new(MultiProgress::new());

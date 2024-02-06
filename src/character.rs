@@ -21,14 +21,14 @@ impl Character {
     }
 
     fn calculate_damage(&self, other: &Character) -> f32 {
-        let damage = self.weapon.as_ref().unwrap().damage;
+        let damage = self.weapon.as_ref().unwrap().damage();
         let attack_type = self.weapon.as_ref().unwrap().get_attack_type();
         let total_defense = other.armor.as_ref().unwrap().calculate_total_defense();
         let defense_type = other.armor.as_ref().unwrap().get_defense_types();
 
         let resistance = defense_type.get(attack_type).unwrap_or(&0.0);
 
-        return (damage - (total_defense * resistance)).max(0.0);
+        (damage - (total_defense * resistance)).max(0.0)
     }
 
     pub fn attack(&self, other: &mut Character) {
